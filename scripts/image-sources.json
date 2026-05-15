@@ -238,20 +238,6 @@
     "attribution": "Wikimedia Commons / CC BY-SA 3.0"
   },
   {
-    "id": "eingemachtes_glas",
-    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Rote_Bete_%26_Kohlrabi_%28Illingen%29_2024-07-24_%2801%29.jpg",
-    "containerType": "screw_jar",
-    "brand": "Eingemachtes",
-    "description": "Eingemachtes Gemüse im Schraubglas",
-    "isReturnable": false,
-    "hints": [
-      "Einmachgläser sind kein Pfand – sie gehören ins Altglas.",
-      "Schraubgläser mit Lebensmitteln haben keinen Pfandwert."
-    ],
-    "license": "CC BY-SA 4.0",
-    "attribution": "Wikimedia Commons / CC BY-SA 4.0"
-  },
-  {
     "id": "blaue_glasflasche",
     "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/2007-11-14BlaueGlasflasche02.jpg",
     "containerType": "glass_bottle",
