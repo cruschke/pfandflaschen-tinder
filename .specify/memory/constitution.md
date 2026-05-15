@@ -108,6 +108,11 @@ All feature work follows the Spec Kit workflow:
 
 Branch naming MUST follow `###-kebab-feature-name` (e.g., `001-swipe-card-ui`).
 
+All developer tasks (install, serve, test, bootstrap, clean) MUST be invoked via `make` targets
+defined in the repository `Makefile`. Raw `npm`, `npx`, or `node` invocations MUST NOT appear
+in documentation, plans, quickstarts, or task instructions — the `Makefile` is the single
+human-facing interface to the dev toolchain.
+
 ## Quality Gates
 
 The following gates MUST pass before a pull request may be merged:
