@@ -348,5 +348,75 @@
     ],
     "license": "CC BY-SA 4.0",
     "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+  },
+  {
+    "id": "granini_orangensaft",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Granini.jpg",
+    "containerType": "plastic_bottle",
+    "brand": "Granini",
+    "description": "Granini Orangensaft Plastikflasche",
+    "isReturnable": false,
+    "hints": [
+      "Fruchtsaftflaschen sind kein Pfand – reiner Fruchtsaft ist vom Einwegpfandsystem ausgenommen.",
+      "Nur Erfrischungsgetränke (Cola, Wasser, Bier in PET) haben 25 Cent Pfand – nicht Saft."
+    ],
+    "license": "Public Domain",
+    "attribution": "Wikimedia Commons / Public Domain"
+  },
+  {
+    "id": "smoothie_flasche",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Naked_Juice_bottle_-_ingredients_cropped.jpg",
+    "containerType": "plastic_bottle",
+    "brand": "Smoothie",
+    "description": "Smoothie Plastikflasche (Fruchtsmoothie)",
+    "isReturnable": false,
+    "hints": [
+      "Smoothie-Flaschen sind kein Pfand – Fruchtsmoothies und -säfte sind pfandfrei.",
+      "Obwohl es eine Plastikflasche ist: Nur Getränke wie Cola, Wasser oder Bier in PET sind pfandpflichtig."
+    ],
+    "license": "CC BY-SA 2.0",
+    "attribution": "Wikimedia Commons / CC BY-SA 2.0"
+  },
+  {
+    "id": "hendricks_gin",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Hendrick%27s_Gin_-_Bottle.png",
+    "containerType": "glass_bottle",
+    "brand": "Hendrick's Gin",
+    "description": "Hendrick's Gin Glasflasche 700ml",
+    "isReturnable": false,
+    "hints": [
+      "Spirituosenflaschen (Gin, Rum, Whisky) sind kein Pfand – sie gehören ins Altglas.",
+      "Hochprozentige Alkoholika sind vom deutschen Pfandsystem ausgenommen."
+    ],
+    "license": "CC BY-SA 4.0",
+    "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+  },
+  {
+    "id": "bacardi_rum",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Bacardi_rum_bottle.jpg",
+    "containerType": "glass_bottle",
+    "brand": "Bacardi",
+    "description": "Bacardi Rum Glasflasche",
+    "isReturnable": false,
+    "hints": [
+      "Rumflaschen sind kein Pfand – Spirituosen gehören ins Altglas.",
+      "Alkohol mit hohem Prozentgehalt (Rum, Gin, Wodka) ist pfandfrei."
+    ],
+    "license": "CC BY-SA 3.0",
+    "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+  },
+  {
+    "id": "aperol_flasche",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Aperol_bottle.JPG",
+    "containerType": "glass_bottle",
+    "brand": "Aperol",
+    "description": "Aperol Flasche 700ml",
+    "isReturnable": false,
+    "hints": [
+      "Aperol und andere Liköre sind kein Pfand – Spirituosen und Aperitifs gehören ins Altglas.",
+      "Nur Getränke wie Bier, Wasser und Softdrinks unterliegen dem Pfandsystem."
+    ],
+    "license": "Public Domain",
+    "attribution": "Wikimedia Commons / Public Domain"
   }
 ]
