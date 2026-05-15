@@ -16,20 +16,11 @@ test.describe('Quiz flow — US1', () => {
       // Wait for the current card to be rendered
       await expect(page.locator('.quiz-card img')).toBeVisible();
 
-      // Dismiss any blocking feedback panel before swiping
-      const feedbackBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await feedbackBtn.isVisible()) {
-        await feedbackBtn.click();
-      }
-
-      // Use action button "Kein Pfand" (left / non-returnable) for all — consistent answers
+      // Use action button "Kein Pfand" for all — consistent answers
       await page.getByRole('button', { name: /kein pfand/i }).click();
 
-      // If a feedback panel blocks, dismiss it
-      const nextBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await nextBtn.isVisible({ timeout: 600 })) {
-        await nextBtn.click();
-      }
+      // Feedback panel always appears — dismiss it
+      await page.getByRole('button', { name: /verstanden/i }).click();
     }
 
     // Result screen should be visible
@@ -50,18 +41,8 @@ test.describe('Quiz flow — US1', () => {
 
     for (let i = 0; i < 10; i++) {
       await expect(page.locator('.quiz-card img')).toBeVisible();
-
-      const feedbackBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await feedbackBtn.isVisible()) {
-        await feedbackBtn.click();
-      }
-
       await page.getByRole('button', { name: 'Pfand', exact: true }).click();
-
-      const nextBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await nextBtn.isVisible({ timeout: 600 })) {
-        await nextBtn.click();
-      }
+      await page.getByRole('button', { name: /verstanden/i }).click();
     }
 
     // Navigate back home

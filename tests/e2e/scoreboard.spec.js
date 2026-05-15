@@ -5,12 +5,9 @@ async function playQuiz(page, name, useReturnable = true) {
   await page.getByRole('button', { name: /quiz starten/i }).click();
   for (let i = 0; i < 10; i++) {
     await expect(page.locator('.quiz-card img')).toBeVisible();
-    const feedbackBtn = page.getByRole('button', { name: /verstanden/i });
-    if (await feedbackBtn.isVisible()) await feedbackBtn.click();
     const btnLabel = useReturnable ? 'Pfand' : 'Kein Pfand';
     await page.getByRole('button', { name: btnLabel, exact: true }).click();
-    const nextBtn = page.getByRole('button', { name: /verstanden/i });
-    if (await nextBtn.isVisible({ timeout: 600 })) await nextBtn.click();
+    await page.getByRole('button', { name: /verstanden/i }).click();
   }
   await expect(page.locator('#screen-result')).toBeVisible();
 }
@@ -59,11 +56,8 @@ test.describe('Scoreboard — US2', () => {
     // Play second round
     for (let i = 0; i < 10; i++) {
       await expect(page.locator('.quiz-card img')).toBeVisible();
-      const feedbackBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await feedbackBtn.isVisible()) await feedbackBtn.click();
       await page.getByRole('button', { name: 'Pfand', exact: true }).click();
-      const nextBtn = page.getByRole('button', { name: /verstanden/i });
-      if (await nextBtn.isVisible({ timeout: 600 })) await nextBtn.click();
+      await page.getByRole('button', { name: /verstanden/i }).click();
     }
 
     await page.getByRole('button', { name: /zur startseite/i }).click();

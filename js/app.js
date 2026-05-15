@@ -23,10 +23,11 @@ const btnTrash       = document.getElementById('btn-trash');
 const indicatorLeft  = quizCard.querySelector('.indicator-left');
 const indicatorRight = quizCard.querySelector('.indicator-right');
 const feedbackPanel  = document.getElementById('feedback-panel');
+const feedbackCard   = feedbackPanel.querySelector('.feedback-card');
+const feedbackIcon   = feedbackPanel.querySelector('.feedback-icon');
 const feedbackHint   = document.getElementById('feedback-hint');
 const feedbackCorrect = document.getElementById('feedback-correct');
 const btnDismiss     = document.getElementById('btn-dismiss');
-const correctFlash   = document.getElementById('correct-flash');
 const resultPlayer   = document.getElementById('result-player');
 const resultScore    = document.getElementById('result-score');
 const resultComment  = document.getElementById('result-comment');
@@ -92,13 +93,8 @@ function handleAnswer(playerChoice) {
   const item = round.items[round.currentIndex];
   const correct = evaluateAnswer(item, playerChoice);
   round.answers.push(correct);
-  if (correct) {
-    round.score += 1;
-    showCorrectFlash();
-    advanceRound();
-  } else {
-    showFeedback(item);
-  }
+  if (correct) round.score += 1;
+  showFeedback(item, correct);
 }
 
 function onSwipe(e) {
@@ -108,18 +104,17 @@ function onSwipe(e) {
 }
 
 // ── Visual feedback ───────────────────────────────────────────────────────────
-function showCorrectFlash() {
-  correctFlash.removeAttribute('hidden');
-  void correctFlash.offsetWidth; // reflow to restart CSS animation
-  setTimeout(() => {
-    correctFlash.setAttribute('hidden', '');
-  }, 1100);
-}
-
-function showFeedback(item) {
-  const correctAnswer = item.isReturnable ? 'Pfand' : 'Kein Pfand';
+function showFeedback(item, isCorrect) {
+  feedbackIcon.textContent = isCorrect ? '✓' : '✗';
+  feedbackCard.classList.toggle('feedback-card--correct', isCorrect);
   feedbackHint.textContent = item.hints[0] ?? '';
-  feedbackCorrect.textContent = `Richtige Antwort: ${correctAnswer}`;
+  if (isCorrect) {
+    feedbackCorrect.setAttribute('hidden', '');
+  } else {
+    const correctAnswer = item.isReturnable ? 'Pfand' : 'Kein Pfand';
+    feedbackCorrect.textContent = `Richtige Antwort: ${correctAnswer}`;
+    feedbackCorrect.removeAttribute('hidden');
+  }
   feedbackPanel.removeAttribute('hidden');
   btnDismiss.focus();
 }
