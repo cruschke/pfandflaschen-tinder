@@ -88,7 +88,7 @@ make clean        Remove downloaded images and reset bottles.json to empty
 
 ---
 
-## 5. Deploy to GitHub Pages
+## 6. Deploy to GitHub Pages
 
 Push the repository to GitHub and enable Pages from the repository settings (source: root of
 `main` branch). Only the following files/directories are part of the deployed site:
