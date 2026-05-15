@@ -1,0 +1,75 @@
+{
+  "version": "0.1.0",
+  "items": [
+    {
+      "id": "becks_500ml",
+      "filename": "becks_500ml.webp",
+      "sourceUrl": "https://example.com/becks.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Beck's",
+      "description": "Beck's Pils 500ml",
+      "isReturnable": true,
+      "hints": [
+        "Bierflaschen sind immer Pfand."
+      ],
+      "license": "CC0",
+      "attribution": "Test"
+    },
+    {
+      "id": "fanta_pet",
+      "filename": "fanta_pet.webp",
+      "sourceUrl": "https://example.com/fanta.jpg",
+      "containerType": "plastic_bottle",
+      "brand": "Fanta",
+      "description": "Fanta PET 0,5l",
+      "isReturnable": true,
+      "hints": [
+        "PET-Flaschen mit Pfandzeichen sind Pfand."
+      ],
+      "license": "CC0",
+      "attribution": "Test"
+    },
+    {
+      "id": "nutella_450g",
+      "filename": "nutella_450g.webp",
+      "sourceUrl": "https://example.com/nutella.jpg",
+      "containerType": "screw_jar",
+      "brand": "Nutella",
+      "description": "Nutella 450g Glas",
+      "isReturnable": false,
+      "hints": [
+        "Schraubgläser sind kein Pfand."
+      ],
+      "license": "CC0",
+      "attribution": "Test"
+    },
+    {
+      "id": "wine_bottle",
+      "filename": "wine_bottle.webp",
+      "sourceUrl": "https://example.com/wine.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Testweingut",
+      "description": "Rotwein 0,75l",
+      "isReturnable": false,
+      "hints": [
+        "Weinflaschen sind kein Pfand."
+      ],
+      "license": "CC0",
+      "attribution": "Test"
+    },
+    {
+      "id": "cider_540ml",
+      "filename": "cider_540ml.webp",
+      "sourceUrl": "https://example.com/cider.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Testcider",
+      "description": "Apfelcider 540ml",
+      "isReturnable": false,
+      "hints": [
+        "Ciderflaschen (540ml) sind kein Pfand – anders als Bierflaschen (500ml)."
+      ],
+      "license": "CC0",
+      "attribution": "Test"
+    }
+  ]
+}

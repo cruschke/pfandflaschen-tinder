@@ -1,0 +1,19 @@
+{
+  "name": "pfandflaschen-tinder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quiz app to train identifying returnable German bottles",
+  "type": "module",
+  "scripts": {
+    "serve": "npx serve . -p 3000",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test tests/unit/*.test.js",
+    "test:e2e": "npx playwright test",
+    "bootstrap": "node scripts/bootstrap-images.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "serve": "^14.2.3",
+    "sharp": "^0.33.4"
+  }
+}

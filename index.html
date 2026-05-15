@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pfandflaschen-Trainer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══ HOME SCREEN ═══════════════════════════════════════════════ -->
+  <section id="screen-home" class="screen" aria-label="Startseite">
+    <div class="home-layout">
+      <header class="app-header">
+        <h1 class="app-title">Pfandflaschen<br>Trainer</h1>
+        <p class="app-subtitle">Lerne, Pfandflaschen zu erkennen</p>
+      </header>
+
+      <form id="form-start" class="start-form" novalidate>
+        <label class="field-label" for="input-name">Dein Name</label>
+        <input
+          id="input-name"
+          class="text-input"
+          type="text"
+          placeholder="z.B. Anna"
+          autocomplete="off"
+          maxlength="40"
+          aria-required="true"
+        />
+        <p id="name-error" class="field-error" role="alert" aria-live="polite" hidden></p>
+        <p id="load-error" class="field-error" role="alert" aria-live="polite" hidden>
+          Bilddatenbank konnte nicht geladen werden. Bitte Seite neu laden.
+        </p>
+        <button id="btn-start" class="btn btn-primary" type="submit">Quiz starten</button>
+      </form>
+
+      <div class="scoreboard-wrapper">
+        <h2 class="scoreboard-title">Bestenliste</h2>
+        <div id="scoreboard-home" class="scoreboard" role="list" aria-label="Bestenliste"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUIZ SCREEN ════════════════════════════════════════════════ -->
+  <section id="screen-quiz" class="screen" aria-label="Quiz" hidden>
+    <div class="quiz-layout">
+      <header class="quiz-header">
+        <span id="quiz-progress" class="progress-label" aria-live="polite">1 / 10</span>
+      </header>
+
+      <div class="card-area" aria-label="Flaschenkarte">
+        <div id="quiz-card" class="quiz-card" role="img" aria-label="Flasche">
+          <span class="indicator indicator-left" aria-hidden="true">Pfand ✓</span>
+          <span class="indicator indicator-right" aria-hidden="true">Kein Pfand ✗</span>
+          <img id="card-image" class="card-image" src="" alt="" loading="lazy" />
+          <p id="card-brand" class="card-brand"></p>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="btn-returnable" class="btn btn-returnable" aria-label="Pfand">
+          ← Pfand
+        </button>
+        <button id="btn-trash" class="btn btn-trash" aria-label="Kein Pfand">
+          Kein Pfand →
+        </button>
+      </div>
+    </div>
+
+    <!-- Wrong-answer feedback overlay -->
+    <div id="feedback-panel" class="feedback-panel" hidden aria-modal="true" role="dialog" aria-label="Feedback">
+      <div class="feedback-card">
+        <div class="feedback-icon">✗</div>
+        <p id="feedback-hint" class="feedback-hint"></p>
+        <p id="feedback-correct" class="feedback-correct"></p>
+        <button id="btn-dismiss" class="btn btn-primary">Verstanden</button>
+      </div>
+    </div>
+
+    <!-- Correct-answer flash overlay -->
+    <div id="correct-flash" class="correct-flash" hidden aria-live="polite">
+      <span class="correct-label">Richtig! ✓</span>
+    </div>
+  </section>
+
+  <!-- ═══ RESULT SCREEN ══════════════════════════════════════════════ -->
+  <section id="screen-result" class="screen" aria-label="Ergebnis" hidden>
+    <div class="result-layout">
+      <div class="result-card">
+        <p id="result-player" class="result-player"></p>
+        <p id="result-score" class="result-score" aria-live="polite"></p>
+        <p id="result-comment" class="result-comment"></p>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-replay" class="btn btn-primary">Nochmal spielen</button>
+        <button id="btn-home" class="btn btn-secondary">Zur Startseite</button>
+      </div>
+
+      <div class="scoreboard-wrapper">
+        <h2 class="scoreboard-title">Bestenliste</h2>
+        <div id="scoreboard-result" class="scoreboard" role="list" aria-label="Bestenliste"></div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

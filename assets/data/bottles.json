@@ -1,0 +1,395 @@
+{
+  "version": "0.0.4",
+  "items": [
+    {
+      "id": "radeberger_pilsner",
+      "filename": "radeberger_pilsner.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Radeberger_Pilsner.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Radeberger",
+      "description": "Radeberger Pilsner 330ml",
+      "isReturnable": true,
+      "hints": [
+        "Auch kleine Bierflaschen (330ml) haben 8 Cent Pfand.",
+        "Das Radeberger Pilsner ist eine typische Mehrwegbierflasche."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "fanta_orange_pet",
+      "filename": "fanta_orange_pet.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Fanta_Orange.jpg",
+      "containerType": "plastic_bottle",
+      "brand": "Fanta",
+      "description": "Fanta Orange PET-Flasche",
+      "isReturnable": true,
+      "hints": [
+        "Fanta in PET-Flaschen hat 25 Cent Einwegpfand.",
+        "Erkennbar am Pfandsymbol auf dem Etikett oder Boden der Flasche."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "bier_flaschen_gruppe",
+      "filename": "bier_flaschen_gruppe.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Beer_bottles_2018_G1.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Diverse Biere",
+      "description": "Verschiedene Bierflaschen",
+      "isReturnable": true,
+      "hints": [
+        "Alle deutschen Bierflaschen sind Pfandflaschen.",
+        "Egal ob NRW-Flasche, Longneck oder Weizenflasche – immer 8 Cent Pfand."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "grolsch_flaschen",
+      "filename": "grolsch_flaschen.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/Grolsch_Beer_Bottles.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Grolsch",
+      "description": "Grolsch Bier 450ml Bügelflasche",
+      "isReturnable": false,
+      "hints": [
+        "Diese Grolsch-Bügelflasche (450ml) entspricht nicht der deutschen NRW-Norm und ist kein Pfand.",
+        "Ausländische Bierflaschen und Spezialformate sind oft kein Pfand."
+      ],
+      "license": "CC BY-SA 2.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 2.0"
+    },
+    {
+      "id": "bier_1664",
+      "filename": "bier_1664.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/1664_beer_white_and_blue_bottles.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Kronenbourg 1664",
+      "description": "Kronenbourg 1664 Bier 250ml",
+      "isReturnable": false,
+      "hints": [
+        "Ausländische Biermarken und Nicht-Standard-Flaschengrößen sind kein Pfand.",
+        "Das Pfandsystem gilt nur für Flaschen, die dem deutschen Standard entsprechen."
+      ],
+      "license": "CC BY-SA 2.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 2.0"
+    },
+    {
+      "id": "nutella_glas",
+      "filename": "nutella_glas.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Nutella_ak.jpg",
+      "containerType": "screw_jar",
+      "brand": "Nutella",
+      "description": "Nutella Schraubglas 450g",
+      "isReturnable": false,
+      "hints": [
+        "Schraubgläser (z.B. Nutella, Marmelade) sind kein Pfand.",
+        "Lebensmittelgläser gehören ins Altglas – nicht in den Pfandautomaten."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "weisswein_flasche",
+      "filename": "weisswein_flasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/White_wine.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Weißwein",
+      "description": "Weißwein 750ml Glasflasche",
+      "isReturnable": false,
+      "hints": [
+        "Weinflaschen sind kein Pfand – unabhängig von der Farbe des Weins.",
+        "750ml-Weinflaschen gehören in die Altglassammlung."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "vinho_weinflasche",
+      "filename": "vinho_weinflasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/4_-_Vinho.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Vinho",
+      "description": "Weinflasche 750ml",
+      "isReturnable": false,
+      "hints": [
+        "Weinflaschen – egal welcher Herkunft – sind kein Pfand.",
+        "Die typische Bordeaux-Flasche gehört ins Altglas."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "rotkäppchen_sekt",
+      "filename": "rotkäppchen_sekt.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Rotk%C3%A4ppchen_Sekt.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Rotkäppchen",
+      "description": "Rotkäppchen Sekt 750ml",
+      "isReturnable": false,
+      "hints": [
+        "Sektflaschen sind kein Pfand – auch bekannte deutsche Marken wie Rotkäppchen nicht.",
+        "Schaumwein und Sekt sind vom Pfandsystem ausgenommen."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "cococciola_wein",
+      "filename": "cococciola_wein.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/A_bottle_of_Cococciola_wine.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Cococciola",
+      "description": "Cococciola Weißwein 750ml",
+      "isReturnable": false,
+      "hints": [
+        "Weinflaschen sind nie Pfand – egal ob deutsch oder importiert.",
+        "Erkennbar an der schlanken 750ml-Form und dem Korkenverschluss."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "marmelade_glas",
+      "filename": "marmelade_glas.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Marmelade.jpg",
+      "containerType": "screw_jar",
+      "brand": "Marmelade",
+      "description": "Marmeladenglas Schraubverschluss",
+      "isReturnable": false,
+      "hints": [
+        "Marmeladengläser sind keine Pfandflaschen.",
+        "Schraubgläser für Lebensmittel haben keinen Pfandwert."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "konfitüre_glas",
+      "filename": "konfitüre_glas.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Jam_jar.jpg",
+      "containerType": "screw_jar",
+      "brand": "Konfitüre",
+      "description": "Konfitürenglas Schraubdeckel",
+      "isReturnable": false,
+      "hints": [
+        "Einmachgläser und Konfitürengläser sind kein Pfand.",
+        "Diese Glasart gehört ins Altglas, nicht zum Pfandautomaten."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "blaue_glasflasche",
+      "filename": "blaue_glasflasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/2007-11-14BlaueGlasflasche02.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Dekorationsflasche",
+      "description": "Blaue Zierglasflaschen",
+      "isReturnable": false,
+      "hints": [
+        "Dekorations- und Zierflaschen sind kein Pfand.",
+        "Nur Mehrwegflaschen des deutschen Pfandsystems haben Pfandwert."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "club_mate_flasche",
+      "filename": "club_mate_flasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Club-Mate.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Club-Mate",
+      "description": "Club-Mate 500ml Glasflasche",
+      "isReturnable": true,
+      "hints": [
+        "Club-Mate-Flaschen sind Pfandflaschen (8 Cent).",
+        "Erfrischungsgetränke in Glasflaschen sind in Deutschland meist Mehrwegflaschen."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "mineralwasser_pet",
+      "filename": "mineralwasser_pet.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Mineralwasserflasche.jpg",
+      "containerType": "plastic_bottle",
+      "brand": "Mineralwasser",
+      "description": "Mineralwasser PET-Flasche 0,5l",
+      "isReturnable": true,
+      "hints": [
+        "PET-Mineralwasserflaschen haben 25 Cent Einwegpfand.",
+        "Das Pfandzeichen ist auf dem Etikett oder Flaschenboden zu finden."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "hefeweizen_flasche",
+      "filename": "hefeweizen_flasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rothaus_Hefeweizen_Z%C3%A4pfle.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Rothaus Hefeweizen",
+      "description": "Rothaus Hefeweizen Zäpfle 500ml",
+      "isReturnable": true,
+      "hints": [
+        "Bierflaschen – auch Weizenbierflaschen – sind immer Pfandflaschen.",
+        "Die hohe, schlanke Weizenbierflasche (Zäpfle) ist eine Mehrwegflasche mit 8 Cent Pfand."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "paulaner_weissbier",
+      "filename": "paulaner_weissbier.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Paulaner_Hefe-Weissbier.JPG",
+      "containerType": "glass_bottle",
+      "brand": "Paulaner",
+      "description": "Paulaner Hefe-Weißbier 500ml",
+      "isReturnable": true,
+      "hints": [
+        "Paulaner Weißbier ist eine Mehrwegflasche mit 8 Cent Pfand.",
+        "Alle deutschen Bierflaschen unterliegen dem Pfandsystem."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "bionade_flasche",
+      "filename": "bionade_flasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Bionade_-_viermal.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Bionade",
+      "description": "Bionade 330ml Glasflaschen",
+      "isReturnable": true,
+      "hints": [
+        "Bionade-Flaschen sind Pfandflaschen (8 Cent).",
+        "Glasflaschen für Erfrischungsgetränke sind in Deutschland meist Mehrwegflaschen."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "coca_cola_pet",
+      "filename": "coca_cola_pet.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Coca-Cola_2.5L_bottle_in_Mainland_China_20160514.jpg",
+      "containerType": "plastic_bottle",
+      "brand": "Coca-Cola",
+      "description": "Coca-Cola PET-Flasche",
+      "isReturnable": true,
+      "hints": [
+        "PET-Flaschen von Erfrischungsgetränken haben immer 25 Cent Einwegpfand.",
+        "Das Pfandzeichen auf PET-Flaschen weist auf die Rückgabepflicht hin."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "rotwein_flasche",
+      "filename": "rotwein_flasche.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Rotwein_Beaujolais-Villages_Celliers_de_Beauregard.jpg",
+      "containerType": "glass_bottle",
+      "brand": "Rotwein",
+      "description": "Beaujolais Rotwein 750ml",
+      "isReturnable": false,
+      "hints": [
+        "Weinflaschen (750ml) sind kein Pfand – sie gehören ins Altglas.",
+        "Wein, Sekt und Prosecco sind vom deutschen Pfandsystem ausgenommen."
+      ],
+      "license": "CC BY-SA 3.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 3.0"
+    },
+    {
+      "id": "eingemachtes_glas",
+      "filename": "eingemachtes_glas.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Rote_Bete_%26_Kohlrabi_%28Illingen%29_2024-07-24_%2801%29.jpg",
+      "containerType": "screw_jar",
+      "brand": "Eingemachtes",
+      "description": "Eingemachtes Gemüse im Schraubglas",
+      "isReturnable": false,
+      "hints": [
+        "Einmachgläser sind kein Pfand – sie gehören ins Altglas.",
+        "Schraubgläser mit Lebensmitteln haben keinen Pfandwert."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "coca_cola_dose",
+      "filename": "coca_cola_dose.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Can_of_Coca_Cola_%2826899145485%29.jpg",
+      "containerType": "aluminium_can",
+      "brand": "Coca-Cola",
+      "description": "Coca-Cola Dose 330ml",
+      "isReturnable": true,
+      "hints": [
+        "Alu-Dosen haben in Deutschland 25 Cent Einwegpfand.",
+        "Dosen mit dem Pfandsymbol kannst du am Pfandautomaten im Supermarkt zurückgeben."
+      ],
+      "license": "CC BY 2.0",
+      "attribution": "Wikimedia Commons / CC BY 2.0"
+    },
+    {
+      "id": "fanta_dose",
+      "filename": "fanta_dose.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Fanta-Orange-Can-330ml_84177_%287116950883%29.jpg",
+      "containerType": "aluminium_can",
+      "brand": "Fanta",
+      "description": "Fanta Orange Dose 330ml",
+      "isReturnable": true,
+      "hints": [
+        "Alu-Dosen haben 25 Cent Einwegpfand – egal welche Marke.",
+        "Erkennbar am Pfandsymbol auf der Dose."
+      ],
+      "license": "CC BY 2.0",
+      "attribution": "Wikimedia Commons / CC BY 2.0"
+    },
+    {
+      "id": "redbull_dose",
+      "filename": "redbull_dose.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Red_Bull_Energy_Drink%2C_Dongguan%2C_China_1_May_2024.jpg",
+      "containerType": "aluminium_can",
+      "brand": "Red Bull",
+      "description": "Red Bull Energy Drink 250ml Dose",
+      "isReturnable": true,
+      "hints": [
+        "Energy-Drink-Dosen (z.B. Red Bull) haben 25 Cent Einwegpfand.",
+        "Alle Alu-Dosen im deutschen Handel unterliegen dem Einwegpfandsystem."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "heinz_ketchup_pet",
+      "filename": "heinz_ketchup_pet.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Heinz_Tomato_Ketchup%2C_Canada_%28front%29%2C_2026-02-19.jpg",
+      "containerType": "plastic_bottle",
+      "brand": "Heinz",
+      "description": "Heinz Tomato Ketchup Squeeze-Flasche",
+      "isReturnable": false,
+      "hints": [
+        "Ketchupflaschen sind keine Pfandflaschen – sie sind Lebensmittelverpackungen.",
+        "Nur Getränkeflaschen unterliegen dem deutschen Pfandsystem."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    },
+    {
+      "id": "heinz_ketchup_glas",
+      "filename": "heinz_ketchup_glas.webp",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Bouteille_en_verre_57.png",
+      "containerType": "glass_bottle",
+      "brand": "Heinz",
+      "description": "Heinz Tomato Ketchup Glasflasche 57",
+      "isReturnable": false,
+      "hints": [
+        "Ketchup-Glasflaschen sind kein Pfand – sie gehören ins Altglas.",
+        "Lebensmittelflaschen (Ketchup, Essig, Öl) unterliegen nicht dem Pfandsystem."
+      ],
+      "license": "CC BY-SA 4.0",
+      "attribution": "Wikimedia Commons / CC BY-SA 4.0"
+    }
+  ]
+}

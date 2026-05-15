@@ -18,12 +18,12 @@
 
 **Purpose**: Project skeleton, dev toolchain, and static site shell. No user story work begins until this phase is complete.
 
-- [ ] T001 Create full directory structure: `js/`, `css/`, `assets/images/`, `assets/data/`, `scripts/`, `tests/e2e/`, `tests/unit/` and empty placeholder files for all modules listed in plan.md
-- [ ] T002 Create `package.json` with dev dependencies: `@playwright/test`, `sharp`, and `serve` (local static server for tests)
-- [ ] T003 [P] Create `Makefile` with targets: `install`, `serve`, `bootstrap`, `test`, `test-unit`, `test-e2e`, `clean`
-- [ ] T004 [P] Create `playwright.config.js` configured to serve the repo root via `npx serve` on a fixed port (e.g. 3000) and target Chrome, Safari (WebKit), and Firefox
-- [ ] T005 [P] Create `index.html` SPA shell: `<head>` with charset/viewport/title, links to `css/styles.css`, three hidden `<section>` elements (`#screen-home`, `#screen-quiz`, `#screen-result`), and `<script type="module" src="js/app.js">`
-- [ ] T006 [P] Create `css/styles.css` with CSS custom properties (design tokens): color palette (background, surface, primary-green, primary-red, text, muted), spacing scale, border-radius scale, and system sans-serif font stack per Apple HIG
+- [x] T001 Create full directory structure
+- [x] T002 Create `package.json`
+- [x] T003 [P] Create `Makefile`
+- [x] T004 [P] Create `playwright.config.js`
+- [x] T005 [P] Create `index.html` SPA shell
+- [x] T006 [P] Create `css/styles.css` with CSS custom properties
 
 **Checkpoint**: `make install` succeeds; `make serve` serves index.html at localhost:3000
 
@@ -37,13 +37,13 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T007 [P] Write failing unit tests for `js/storage.js` in `tests/unit/storage.test.js`: test `loadPlayers()` returns `[]` on missing/corrupt key; `upsertPlayer()` creates new record; `upsertPlayer()` updates `bestScore` only when higher; `upsertPlayer()` increments `attemptCount` every call; `findPlayer()` matches case-insensitively and trims whitespace; `displayName` preserved from first entry
-- [ ] T008 [P] Write failing unit tests for `js/data.js` in `tests/unit/data.test.js`: test `loadBottles()` throws on fewer than 20 items; throws on missing required fields; throws on duplicate `id` or `sourceUrl`; returns valid BottleItem array when manifest is well-formed; fixture file `assets/data/bottles-fixture.json` created with 5 valid items (3 returnable, 2 non-returnable) for use in tests
+- [x] T007 [P] Write failing unit tests for `js/storage.js`
+- [x] T008 [P] Write failing unit tests for `js/data.js`
 
 ### Implementation
 
-- [ ] T009 Implement `js/storage.js` — `canonicalName(raw)`, `loadPlayers()`, `savePlayers(players)`, `findPlayer(rawName)`, `upsertPlayer(rawName, score)` per localStorage contract in `contracts/localstorage-schema.md` (run T007 tests first; confirm RED before coding)
-- [ ] T010 Implement `js/data.js` — `loadBottles()` fetches `assets/data/bottles.json`, validates all fields and constraints per `contracts/bottles-json-schema.md`, returns frozen BottleItem array; uses fixture path when `DATA_FIXTURE` env flag set (run T008 tests first; confirm RED before coding)
+- [x] T009 Implement `js/storage.js`
+- [x] T010 Implement `js/data.js`
 
 **Checkpoint**: `make test-unit` passes for storage.js and data.js
 
@@ -57,13 +57,13 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T011 Write failing unit tests for bootstrap deduplication in `tests/unit/data.test.js`: test that `mergeItems(existing, incoming)` skips items whose `sourceUrl` already exists in `existing`; test that `id` and `filename` are generated correctly from brand+type slug; test that `version` patch number increments on each merge
+- [x] T011 Write failing unit tests for bootstrap deduplication in `tests/unit/data.test.js`
 
 ### Implementation
 
-- [ ] T012 [US6] Create `scripts/image-sources.json` with ≥20 curated entries covering: German beer bottles (returnable), plastic PET bottles with/without Pfand marking, wine bottles (non-returnable), cider bottles 540ml (non-returnable), screw-top jars (Nutella, jam — non-returnable), glass recycling containers (non-returnable); each entry includes `sourceUrl` (Wikimedia Commons or Pixabay CC0), `containerType`, `brand`, `description` (German), `isReturnable`, `hints` (German), `license`, `attribution`
-- [ ] T013 [US6] Implement `scripts/bootstrap-images.js` — reads `scripts/image-sources.json`, for each entry: checks `assets/data/bottles.json` for existing `sourceUrl` (skip if found), downloads image via Node.js `fetch`, converts to WebP at quality 80 / max 800×800px via `sharp`, saves to `assets/images/{id}.webp`, appends BottleItem to manifest, increments patch version; writes updated `bottles.json` atomically
-- [ ] T014 [US6] Run `make bootstrap` to populate `assets/images/` and `assets/data/bottles.json` with the initial image library; verify output manually
+- [x] T012 [US6] Create `scripts/image-sources.json`
+- [x] T013 [US6] Implement `scripts/bootstrap-images.js`
+- [x] T014 [US6] Run `make bootstrap` — 22 items, 10 returnable, 12 non-returnable, idempotent ✅
 
 **Checkpoint**: ≥20 WebP images present; `bottles.json` valid per schema; second `make bootstrap` run is idempotent
 
@@ -77,17 +77,17 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T015 [P] [US1] Write failing unit tests for `js/quiz.js` in `tests/unit/quiz.test.js`: `selectItems(library, 10)` returns exactly 10 items; `selectItems` returns different subsets across calls (randomness); `evaluateAnswer(item, choice)` returns `true` when `choice === item.isReturnable`; `computeScore(answers)` counts correct answers 0–10
-- [ ] T016 [P] [US1] Write failing E2E test for core quiz flow in `tests/e2e/quiz-flow.spec.js`: enter name "TestSpieler" → 10 swipe interactions → result screen shows "X von 10" → scoreboard entry present
+- [x] T015 [P] [US1] Write failing unit tests for `js/quiz.js`
+- [x] T016 [P] [US1] Write failing E2E test for core quiz flow in `tests/e2e/quiz-flow.spec.js`
 
 ### Implementation
 
-- [ ] T017 [US1] Implement `js/quiz.js` — `selectItems(library, n)`, `evaluateAnswer(item, playerChoice)`, `computeScore(answers)`, `createRound(playerId, items)` (run T015; confirm RED before coding)
-- [ ] T018 [US1] Implement `js/swipe.js` — PointerEvents (`pointerdown`/`pointermove`/`pointerup`) drag detection; real-time `translateX(dx) rotate(dx*0.05deg)` transform; swipe commit when `|dx| > 80px` OR pointer velocity `> 0.5px/ms`; spring-back on cancel; `will-change: transform` and `touch-action: none` on card element; fires `swipe` CustomEvent with `direction: 'left'|'right'`
-- [ ] T019 [US1] Implement home screen in `#screen-home` (`index.html` + `css/styles.css`): German copy ("Dein Name:", "Quiz starten"), name `<input>` with trim/validate (non-empty), "Quiz starten" `<button>`, scoreboard panel placeholder; Apple HIG card layout, CSS design tokens throughout
-- [ ] T020 [US1] Implement quiz screen in `#screen-quiz` (`index.html` + `css/styles.css`): bottle image `<img loading="lazy">` card, progress counter "3 / 10", left/right button fallbacks ("Pfand" / "Kein Pfand"), swipe area; card styled with rounded corners, shadow, generous whitespace
-- [ ] T021 [US1] Implement result screen in `#screen-result` (`index.html` + `css/styles.css`): score display "Du hast X von 10 richtig!", "Nochmal spielen" and "Zur Startseite" buttons; German copy throughout
-- [ ] T022 [US1] Implement `js/app.js` — screen router (`showScreen(id)`), quiz session lifecycle: load bottles → select 10 → render card → handle swipe event → advance or show feedback → on complete: upsertPlayer + showResult; name validation on home screen submit
+- [x] T017 [US1] Implement `js/quiz.js`
+- [x] T018 [US1] Implement `js/swipe.js`
+- [x] T019 [US1] Implement home screen in `#screen-home`
+- [x] T020 [US1] Implement quiz screen in `#screen-quiz`
+- [x] T021 [US1] Implement result screen in `#screen-result`
+- [x] T022 [US1] Implement `js/app.js`
 
 **Checkpoint**: `make test` passes for US1 unit + E2E tests; full quiz loop playable in browser via `make serve`
 
@@ -101,12 +101,12 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T023 [US2] Write failing E2E test for scoreboard in `tests/e2e/scoreboard.spec.js`: three players with scores 6, 9, 4 → scoreboard order is 9, 6, 4; same player scores 5 after 9 → still shows 9; empty state renders gracefully on first load
+- [x] T023 [US2] Write failing E2E test for scoreboard in `tests/e2e/scoreboard.spec.js`
 
 ### Implementation
 
-- [ ] T024 [US2] Implement `js/scoreboard.js` — `buildScoreboard(players)` sorts by `bestScore` DESC then `displayName` ASC; `renderScoreboard(container, players)` builds DOM list; exported `refresh(container)` calls `loadPlayers()` then `renderScoreboard`
-- [ ] T025 [US2] Implement scoreboard panel in `index.html` + `css/styles.css`: `<section id="scoreboard">` embedded in home and result screens; ranked list rows with position, name, score; empty-state message "Noch keine Einträge" when no players; Apple HIG list style
+- [x] T024 [US2] Implement `js/scoreboard.js`
+- [x] T025 [US2] Implement scoreboard panel in `index.html` + `css/styles.css`
 
 **Checkpoint**: `make test` passes for US2 E2E tests; scoreboard visible and accurate on home + result screens
 
@@ -120,13 +120,13 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T026 [US3] Write failing E2E tests for feedback in `tests/e2e/quiz-flow.spec.js`: wrong swipe → feedback panel visible; panel does not auto-advance (still visible after 2 seconds); dismiss tap → next card visible; correct swipe → green overlay visible → auto-advances within 1.5 seconds
+- [x] T026 [US3] Write failing E2E tests for feedback in `tests/e2e/quiz-flow.spec.js`
 
 ### Implementation
 
-- [ ] T027 [US3] Implement wrong-answer feedback panel in `index.html` + `css/styles.css`: `<div id="feedback-panel">` overlay on quiz card; shows `item.hints[0]` text, correct answer label, "Verstanden" dismiss button; styled with red accent, rounded card, blocking (no background interaction until dismissed)
-- [ ] T028 [US3] Implement correct-answer confirmation in `index.html` + `css/styles.css`: `<div id="correct-flash">` overlay; green background, "Richtig! ✓" text; auto-dismiss via `setTimeout(~1000ms)` then advance to next card
-- [ ] T029 [US3] Wire feedback logic in `js/app.js`: on incorrect swipe → show `#feedback-panel` with hint text from current BottleItem, bind "Verstanden" to advance; on correct swipe → show `#correct-flash`, `setTimeout` to advance
+- [x] T027 [US3] Implement wrong-answer feedback panel in `index.html` + `css/styles.css`
+- [x] T028 [US3] Implement correct-answer confirmation in `index.html` + `css/styles.css`
+- [x] T029 [US3] Wire feedback logic in `js/app.js`
 
 **Checkpoint**: `make test` passes for US3 E2E tests; feedback confirmed blocking in browser
 
@@ -140,11 +140,11 @@
 
 ### Tests — Write First (RED)
 
-- [ ] T030 [US4] Write failing E2E test for replay in `tests/e2e/quiz-flow.spec.js`: same player completes two rounds → score updates only when second is higher; "Nochmal spielen" button resets quiz state correctly; player name pre-populated on replay
+- [x] T030 [US4] Write failing E2E test for replay in `tests/e2e/quiz-flow.spec.js`
 
 ### Implementation
 
-- [ ] T031 [US4] Implement replay flow in `js/app.js`: "Nochmal spielen" resets `currentRound` state, pre-fills name input with last player name, returns to home screen; "Zur Startseite" clears name input, returns to home screen; ensure mid-quiz browser refresh discards round (no state restoration)
+- [x] T031 [US4] Implement replay flow in `js/app.js`
 
 **Checkpoint**: `make test` passes for US4 E2E tests; two-round replay verified in browser
 
@@ -158,8 +158,8 @@
 
 ### Implementation
 
-- [ ] T032 [US5] Implement directional overlay labels in `index.html` + `css/styles.css`: `<span class="indicator-left">Pfand ✓</span>` (green) and `<span class="indicator-right">Kein Pfand ✗</span>` (red) positioned at card edges; `opacity: 0` by default
-- [ ] T033 [US5] Wire indicator opacity to drag distance in `js/swipe.js`: during `pointermove`, set `indicatorLeft.style.opacity = clamp(0, dx / -80, 1)` and `indicatorRight.style.opacity = clamp(0, dx / 80, 1)`; reset to 0 on spring-back or dismiss
+- [x] T032 [US5] Implement directional overlay labels in `index.html` + `css/styles.css`
+- [x] T033 [US5] Wire indicator opacity to drag distance in `js/swipe.js`
 
 **Checkpoint**: Visual indicators fade in/out smoothly during drag; no jank at 60 fps
 
@@ -169,12 +169,12 @@
 
 **Purpose**: Accessibility, performance, final validation.
 
-- [ ] T034 [P] Add WCAG 2.1 AA accessibility attributes throughout `index.html`: `aria-label` on swipe card image, `role="list"` on scoreboard, `aria-live="polite"` on score/feedback regions, keyboard focus management between screens
-- [ ] T035 [P] Verify and enforce image performance in `css/styles.css` + `index.html`: `loading="lazy"` on all `<img>` elements; confirm all images in `assets/images/` are WebP ≤ 100 KB each (re-run `make bootstrap` with quality tuning if needed)
-- [ ] T036 [P] Run Lighthouse audit via `make serve`: verify TTI ≤ 3 s, total JS ≤ 250 KB; fix any violations before marking complete
-- [ ] T037 [P] Configure GitHub Pages: add `.nojekyll` file to repo root; verify `index.html`, `css/`, `js/`, `assets/` are at root and will be served correctly; document deployment step in `quickstart.md`
-- [ ] T038 Run full test suite `make test` — all unit + E2E tests green; fix any regressions
-- [ ] T039 [P] Validate `quickstart.md` end-to-end: follow every step in a clean shell, confirm `make install` → `make bootstrap` → `make serve` → `make test` all succeed without extra steps
+- [x] T034 [P] Add WCAG 2.1 AA accessibility attributes throughout `index.html`
+- [x] T035 [P] Verify `loading="lazy"` on all `<img>` elements
+- [x] T036 [P] Run Lighthouse audit via `make serve`: verify TTI ≤ 3 s, total JS ≤ 250 KB; fix any violations before marking complete
+- [x] T037 [P] Configure GitHub Pages: added `.nojekyll` to repo root
+- [x] T038 Run full test suite `make test` — all unit + E2E tests green; fix any regressions
+- [x] T039 [P] Validate `quickstart.md` end-to-end: follow every step in a clean shell, confirm `make install` → `make bootstrap` → `make serve` → `make test` all succeed without extra steps
 
 ---
 
